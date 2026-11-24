@@ -220,10 +220,10 @@
     <tr>
       <td>Arduino UNO</td>
       <td>1</td>
-      <td>$24.99 CAD</td>
-      <td>$24.99 CAD</td>
+      <td>$30.56 CAD</td>
+      <td>$30.56 CAD</td>
       <td>
-        <a href="https://www.amazon.ca/Elegoo-Board-ATmega328P-ATMEGA16U2-Arduino/dp/B01EWOE0UU?ref_=ast_sto_dp" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.amazon.ca/Arduino-A000066-Microcontroller-Connectivity-Prototyping/dp/B008GRTSV6" target="_blank" rel="noopener noreferrer">
           Amazon Canada
         </a>
       </td>
@@ -305,8 +305,8 @@
   <tfoot>
     <tr>
       <td colspan="2"><strong>Total</strong></td>
-      <td><strong>$45.15 CAD</strong></td>
-      <td><strong>$85.17 CAD</strong></td>
+      <td><strong>$50.72 CAD</strong></td>
+      <td><strong>$90.74 CAD</strong></td>
       <td>—</td>
     </tr>
   </tfoot>
@@ -333,19 +333,17 @@
       <pre class="line-numbers">
  
   <code id="arduinoCode" class="language-cpp">
-// Collision Warning System with Distance Sensor (HC-SR04)
-// Author: Ana Rodrigues
-// Oct 2, 2025
-// Object is farther than 50cm: Green LED lights up
-// Object is closer than 50 cm, but more than 10cm away: Yellow LED lights, buzzer plays 300Hz tone
-// Object is closer than 10cm: Red LED lights up, buzzer plays 500Hz tone
+// Remote Controlled Garage Door
+// Author: Kutay Gedik, Rankira Coke , Jiajun He
+// Nov 24, 2026
+// Up: The motor rotates forward to rise the garage door.
+// Stop: The motor stop rotates and the garage door pauses.
+// Down: The motor rotates backward to lower the garege door.
 
-//LED pins
-const int greenLED = 2;
-const int yellowLED = 3;
-const int redLED = 4;
+//IR receiver pin
+const int receiverpin = 11;
 
-// Ultrasonic sensor pins
+// Motor pins
 const int trigPin = 9;
 const int echoPin = 10;
 
